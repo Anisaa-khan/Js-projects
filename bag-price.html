@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+
+            margin-left:40% ;
+            margin-top: 80px;
+        }
+        .wish-button{
+            padding: 5px 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 20px;
+        }
+        .bag-button{
+            background-color: burlywood;
+            padding: 5px 30px;
+            border-radius: 80px;
+            border: 1px solid burlywood;
+            font-weight: 600;
+        }
+        #cart-summary{
+            margin-left:10% ;
+            margin-top: 40px;   
+        }
+     
+    </style>
+</head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+crossorigin="anonymous"></script>
+
+
+<body>
+   <div class="box">
+    <button class="bag-button" onclick="cartQuantity=cartQuantity+1; 
+     document.querySelector('#cart-summary').innerText='Your Bag has '  + cartQuantity +  ' items';">Add to Bag</button>
+  
+    <button class="wish-button" onclick="cartQuantity=cartQuantity-1;
+    document.querySelector('#cart-summary').innerText='Your Bag has '  + cartQuantity +  ' items';">Move to Wishlist</button>
+
+    <button class="bag-button" onclick="cartQuantity=cartQuantity+2;
+    document.querySelector('#cart-summary').innerText='Your Bag has '  + cartQuantity +  ' items';">Add 1+1 Sale item</button>
+
+    <h1 id="cart-summary"></h1>
+</div> 
+
+
+
+
+
+<script>
+    let cartQuantity= 0;
+    document.querySelector('#cart-summary').innerText='Your Bag has '  + cartQuantity +  ' items';
+</script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+<style>
+    body{
+        background-image: url(https://image.slidesdocs.com/responsive-images/background/blank-paper-rubber-green-cute-math-education-powerpoint-background_edd541e227__960_540.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+    button{
+        margin-top: 350px;
+    }
+    #year{
+        color: brown;
+        font-family: 'poppins' sans-serif;
+        font-weight: bold;
+        
+    }
+</style>
+</head>
+<body>
+    <div class="d-flex justify-content-center align-items-center mt-5">
+
+        <button type="button" class="btn btn-danger btn-lg" onclick="agecalculate()">Age Calculator</button>
+    </div>
+    <h1 class=" text-center mt-5" id="year"></h1>
+    <script>
+
+            function agecalculate (){
+                var x=prompt("Enter x to get Your Age");
+                var y=prompt("Enter y to get Your Age");
+           const myage=x-y;
+            // console.log(myage);
+
+
+document.getElementById('year').innerHTML="your Age is=" +myage;
+            }
+    </script>
+
+</body>
+
+</html>

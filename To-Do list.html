@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+           
+            height: 100vh;
+           background-image: url('https://c8.alamy.com/comp/FP4218/paper-on-wood-background-FP4218.jpg');
+           background-repeat: no-repeat;
+           background-size: cover;
+           background-position: center;
+            font-family: Arial;
+        }
+        #main-heading{
+            text-align: center;
+            margin-top: 250px;
+            margin-bottom: 60px;
+            font-weight: bold;
+            font-size: 45px;
+        }
+       
+        .grid-container{
+          align-items: center;
+            justify-content: center;
+            width: 50%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 200px 150px 100px; 
+            column-gap: 10px;
+            row-gap: 10px;
+            margin-top: 10px;
+        }
+        #todo-input, #todo-date{
+            font-size: 15px;
+            padding: 10px 5px;
+        }
+        .btn-delete {
+            background-color: rgb(87, 4, 4);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 15px 0px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn-todo{
+            background-color: rgb(5, 119, 19);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 15px 0px;
+            cursor: pointer; font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>   
+     <h1 id="main-heading">Todo List</h1>
+
+    <div class="grid-container">
+    
+        <input id="todo-input" type="text" placeholder="Enter Todo here">
+        <input id="todo-date" type="date">
+        <button class="btn-todo" onclick="addTodo();">Add</button>
+    </div>
+    <div class="grid-container todo-container"></div>
+
+
+    <p id="todo-Items"></p>
+
+
+
+
+
+
+    <script src="todo.js"></script>
+
+</body>
+
+</html>
